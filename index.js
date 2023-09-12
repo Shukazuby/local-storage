@@ -21,6 +21,13 @@ function signUp() {
     alert("Please confirm password");
   } else {
     if (firstName && surName && nickName && email && password && confirm) {
+<<<<<<< HEAD
+=======
+      localStorage.setItem(
+        "signUP",
+        JSON.stringify([firstName, surName, nickName, email, password, confirm])
+      );
+>>>>>>> b82496ba8da2803395cabc85008a4310ff6f2c1c
       alert(`${firstName}, you have successfully Sign Up`);
     } else {
       alert(`Please try sign up again`);
@@ -28,7 +35,7 @@ function signUp() {
   }
 }
 
-// login page 
+// login page
 
 const loginContain = document.getElementById("loginCont");
       const loginForm = document.getElementById("loginForm");
@@ -36,6 +43,7 @@ const loginContain = document.getElementById("loginCont");
       const inputEmail = document.getElementById("userEmail").value;
       const inputPassword = document.getElementById("userPassword").value;
 
+<<<<<<< HEAD
       function login() {
         let username = localStorage.getItem("email");
         let pass = localStorage.getItem("password");
@@ -47,3 +55,33 @@ const loginContain = document.getElementById("loginCont");
         }
       }
 
+=======
+function login() {
+  const userNameL = inputName.value;
+  const userEmailL = inputEmail.value;
+  const userPasswordL = inputPassword.value;
+
+  if (userNameL && userEmailL && userPasswordL) {
+    localStorage.setItem(
+      "login",
+      JSON.stringify([userNameL, userEmailL, userFirstName])
+    );
+    alert(`${userNameL}, you just logged in`);
+  } else {
+    alert("Input your details and try again");
+  }
+
+
+  // const userNameL = localStorage.getItem('signUp');
+  // const userEmailL = localStorage.getItem('signUp');
+  // const userPasswordL = localStorage.getItem('signUp');
+
+  // if (userNameL && userEmailL && userPasswordL) {
+  //   localStorage.getItem(
+  //     "signUp");
+  //   alert(`${userNameL}, you just logged in`);
+  // } else {
+  //   alert("Input your details and try again");
+  // }
+}
+>>>>>>> b82496ba8da2803395cabc85008a4310ff6f2c1c
