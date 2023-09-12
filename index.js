@@ -20,14 +20,7 @@ function signUp() {
     if (firstName && surName && nickName && email && password && confirm) {
       localStorage.setItem(
         "signUP",
-        JSON.stringify([
-          firstName,
-          surName,
-          nickName,
-          email,
-          password,
-          confirm,
-        ])
+        JSON.stringify([firstName, surName, nickName, email, password, confirm])
       );
       alert(`${firstName}, you have successfully Sign Up`);
     } else {
@@ -36,7 +29,7 @@ function signUp() {
   }
 }
 
-// login page 
+// login page
 
 const loginContain = document.getElementById("loginCont");
 const loginForm = document.getElementById("loginForm");
@@ -45,27 +38,31 @@ const inputEmail = document.getElementById("userEmail");
 const inputPassword = document.getElementById("userPassword");
 const loginButton = document.getElementById("btn");
 
-
 function login() {
-  const userName = inputName.value;
-  const userEmail = inputEmail.value;
-  const userPassword = inputPassword.value;
+  const userNameL = inputName.value;
+  const userEmailL = inputEmail.value;
+  const userPasswordL = inputPassword.value;
 
-//   let storedData = localStorage.getItem("signUp")
-//   if (storedData !== null) {
-//     localStorage.getItem(
-//       "signUp")
-//     alert(`${userName}, you just logged in`);
-//   } else {
-//     alert("Input your details and try again");
-//   }
-
-
-  if (userName && userEmail && userPassword) {
+  if (userNameL && userEmailL && userPasswordL) {
     localStorage.setItem(
-      "signUp")
-    alert(`${userName}, you just logged in`);
+      "login",
+      JSON.stringify([userNameL, userEmailL, userFirstName])
+    );
+    alert(`${userNameL}, you just logged in`);
   } else {
     alert("Input your details and try again");
   }
+
+
+  // const userNameL = localStorage.getItem('signUp');
+  // const userEmailL = localStorage.getItem('signUp');
+  // const userPasswordL = localStorage.getItem('signUp');
+
+  // if (userNameL && userEmailL && userPasswordL) {
+  //   localStorage.getItem(
+  //     "signUp");
+  //   alert(`${userNameL}, you just logged in`);
+  // } else {
+  //   alert("Input your details and try again");
+  // }
 }
