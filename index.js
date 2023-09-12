@@ -14,21 +14,13 @@ function signUp() {
   const password = userPassword.value;
   const confirm = userConfirmPass.value;
 
+  localStorage.setItem("email", email);
+  localStorage.setItem("password", password);
+
   if (confirm !== password) {
     alert("Please confirm password");
   } else {
     if (firstName && surName && nickName && email && password && confirm) {
-      localStorage.setItem(
-        "signUP",
-        JSON.stringify([
-          firstName,
-          surName,
-          nickName,
-          email,
-          password,
-          confirm,
-        ])
-      );
       alert(`${firstName}, you have successfully Sign Up`);
     } else {
       alert(`Please try sign up again`);
@@ -39,33 +31,19 @@ function signUp() {
 // login page 
 
 const loginContain = document.getElementById("loginCont");
-const loginForm = document.getElementById("loginForm");
-const inputName = document.getElementById("userName");
-const inputEmail = document.getElementById("userEmail");
-const inputPassword = document.getElementById("userPassword");
-const loginButton = document.getElementById("btn");
+      const loginForm = document.getElementById("loginForm");
+      const inputName = document.getElementById("userName").value;
+      const inputEmail = document.getElementById("userEmail").value;
+      const inputPassword = document.getElementById("userPassword").value;
 
+      function login() {
+        let username = localStorage.getItem("email");
+        let pass = localStorage.getItem("password");
+        
+        if ((inputEmail === username) && (inputPassword === pass)) {
+          alert(`${inputName}, you just logged in`);
+        } else {
+          alert("Input your details and try again");
+        }
+      }
 
-function login() {
-  const userName = inputName.value;
-  const userEmail = inputEmail.value;
-  const userPassword = inputPassword.value;
-
-//   let storedData = localStorage.getItem("signUp")
-//   if (storedData !== null) {
-//     localStorage.getItem(
-//       "signUp")
-//     alert(`${userName}, you just logged in`);
-//   } else {
-//     alert("Input your details and try again");
-//   }
-
-
-  if (userName && userEmail && userPassword) {
-    localStorage.setItem(
-      "signUp")
-    alert(`${userName}, you just logged in`);
-  } else {
-    alert("Input your details and try again");
-  }
-}
