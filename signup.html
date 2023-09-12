@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign UP</title>
+  </head>
+  <style>
+    #signUpCont {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: auto;
+      padding: 100px 200px;
+      gap: 20px;
+      height: auto;
+      max-height: 400px;
+      background-color: ghostwhite;
+    }
+    #signForm {
+      width: 50%;
+      margin-bottom: 80px;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    h4 {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+    span {
+      color: rgb(24, 99, 184);
+      font-weight: 900;
+    }
+    input {
+      outline: none;
+      margin: 5px;
+      padding: 5px;
+      border: 0.1px solid rgb(24, 99, 184);
+      border-radius: 5px;
+    }
+    button {
+      padding: 5px 40px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 20px 0 0 5px;
+      align-items: center;
+      background-color: rgb(24, 99, 184);
+      border: none;
+      border-radius: 5px;
+      color: ghostwhite;
+    }
+
+    #signImage {
+      width: 50%;
+    }
+    body {
+      background-color: ghostwhite;
+      width: auto;
+      align-items: center;
+    }
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    a {
+      text-decoration: none;
+      font-style: italic;
+      color: rgb(24, 99, 184);
+    }
+    @media screen and (max-width: 767px) {
+        #signImage {
+        display: none;
+      }
+      #signUpCont {
+        align-items: center;
+        padding: 50px;
+        text-align: center;
+      }
+      #signForm {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+      #signImage {
+        display: none;
+      }
+      #signUpCont {
+        align-items: center;
+        padding: 50px;
+        text-align: center;
+      }
+      #signForm {
+        width: 100%;
+        margin-bottom: 5px;
+      }
+    }
+
+  </style>
+  <body>
+    <div id="signUpCont">
+      <div id="signImage">
+        <img src="Asset/Cyberlock.jpg" alt="" />
+      </div>
+      <div id="signForm">
+        <h1>Sign Up</h1>
+        <h3>Welcome to <span><a href="index.html">ZuCyber</a></h3>
+        <form>
+          <input
+            type="text"
+            id="userFirstName"
+            placeholder="Enter First Name"
+            size="40"
+            required
+          /><br />
+          <input
+            type="text"
+            id="userSurname"
+            placeholder="Enter Surname"
+            size="40"
+            required
+          /><br />
+          <input
+            type="text"
+            id="userName"
+            placeholder="Enter Username"
+            size="40"
+            required
+          /><br />
+          <input
+            type="email"
+            id="userEmail"
+            placeholder="Enter Email"
+            size="40"
+            required
+          /><br />
+          <input
+            type="password"
+            id="userPassword"
+            placeholder="Password"
+            size="40"
+            required
+          /><br />
+          <input
+            type="password"
+            id="userConfirmPass"
+            placeholder="Confirm Password"
+            size="40"
+            required
+          /><br />
+        </form>
+        <button id="btn" onclick="signUp()">Sign Up</button>
+        <h4>
+          Have an account? <span><a href="login.html">Log in here</a></span>
+        </h4>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
