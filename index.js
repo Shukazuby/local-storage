@@ -7,6 +7,7 @@ const userPassword = document.getElementById("userPassword");
 const userConfirmPass = document.getElementById("userConfirmPass");
 
 function signUp() {
+  // e.preventDefault();
   const firstName = userFirstName.value;
   const surName = userSurname.value;
   const nickName = userName.value;
@@ -14,8 +15,8 @@ function signUp() {
   const password = userPassword.value;
   const confirm = userConfirmPass.value;
 
-  localStorage.setItem("email", email);
-  localStorage.setItem("password", password);
+  localStorage.setItem("emails", email);
+  localStorage.setItem("passwords", password);
 
   if (confirm !== password) {
     alert("Please confirm password");
@@ -30,18 +31,24 @@ function signUp() {
 
 // login page 
 
-const loginContain = document.getElementById("loginCont");
+      const loginContain = document.getElementById("loginCont");
       const loginForm = document.getElementById("loginForm");
-      const inputName = document.getElementById("userName").value;
-      const inputEmail = document.getElementById("userEmail").value;
-      const inputPassword = document.getElementById("userPassword").value;
+      
 
-      function login() {
-        let username = localStorage.getItem("email");
-        let pass = localStorage.getItem("password");
+      function login(e) {
+        e.preventDefault();
+        // let nick = inputName.value
+        const inputName = document.getElementById("userName").value;
+        const inputEmail = document.getElementById("userEmails").value;
+        const inputPassword = document.getElementById("userPasswords").value;
+
+        let userMail = localStorage.getItem("emails");
+        let pass = localStorage.getItem("passwords");
+        // alert(userMail)
         
-        if ((inputEmail === username) && (inputPassword === pass)) {
+        if ((inputEmail === userMail) && (inputPassword === pass)) {
           alert(`${inputName}, you just logged in`);
+          // console.log(username + pass)
         } else {
           alert("Input your details and try again");
         }

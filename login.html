@@ -114,7 +114,7 @@
         <h3>
           Welcome back to <span><a href="index.html">ZuCyber</a></span>
         </h3>
-        <!-- <form> -->
+        <form>
           <input
             type="text"
             id="userName"
@@ -124,20 +124,21 @@
           /><br />
           <input
             type="email"
-            id="userEmail"
+            id="userEmails"
             placeholder="Enter Email"
             size="40"
             required
           /><br />
           <input
             type="password"
-            id="userPassword"
+            id="userPasswords"
             placeholder="Password"
             size="40"
             required
           /><br />
-        <!-- </form> -->
-        <button id="btn" onclick="login()">Login</button>
+          <button id="btn" onclick="login(event)">Login</button>
+        </form>
+        
         <h4>
           Don't have an account yet?
           <span><a href="signup.html">Sign up here</a></span>

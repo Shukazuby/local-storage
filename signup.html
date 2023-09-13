@@ -113,7 +113,7 @@
       <div id="signForm">
         <h1>Sign Up</h1>
         <h3>Welcome to <span><a href="index.html">ZuCyber</a></h3>
-        <form>
+        <form action="login.html" method="GET">
           <input
             type="text"
             id="userFirstName"
@@ -156,8 +156,9 @@
             size="40"
             required
           /><br />
+          <button id="btn" onclick="signUp()">Sign Up</button>
         </form>
-        <button id="btn" onclick="signUp()">Sign Up</button>
+        
         <h4>
           Have an account? <span><a href="login.html">Log in here</a></span>
         </h4>
